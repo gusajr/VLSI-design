@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Nov 23 18:46:53 2020
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : testingmif
+Top-level Entity Name : testingmif
+Family : MAX 10
+Total logic elements : 63
+    Total combinational functions : 63
+    Dedicated logic registers : 40
+Total registers : 40
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

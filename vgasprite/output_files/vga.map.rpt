@@ -1,0 +1,1135 @@
+Analysis & Synthesis report for vga
+Thu Nov 26 19:38:12 2020
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Nov 26 19:38:12 2020       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; vga                                         ;
+; Top-level Entity Name              ; vga                                         ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 109                                         ;
+;     Total combinational functions  ; 109                                         ;
+;     Dedicated logic registers      ; 66                                          ;
+; Total registers                    ; 66                                          ;
+; Total pins                         ; 15                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; vga                ; vga                ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 3           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 3           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; freqDivider.vhdl                 ; yes             ; User VHDL File  ; C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/freqDivider.vhdl     ;         ;
+; hcounter.vhdl                    ; yes             ; User VHDL File  ; C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/hcounter.vhdl        ;         ;
+; vcounter.vhdl                    ; yes             ; User VHDL File  ; C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vcounter.vhdl        ;         ;
+; vga.vhdl                         ; yes             ; User VHDL File  ; C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl             ;         ;
+; image_generator.vhdl             ; yes             ; User VHDL File  ; C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimated Total logic elements              ; 109                ;
+;                                             ;                    ;
+; Total combinational functions               ; 109                ;
+; Logic element usage by number of LUT inputs ;                    ;
+;     -- 4 input functions                    ; 35                 ;
+;     -- 3 input functions                    ; 5                  ;
+;     -- <=2 input functions                  ; 69                 ;
+;                                             ;                    ;
+; Logic elements by mode                      ;                    ;
+;     -- normal mode                          ; 47                 ;
+;     -- arithmetic mode                      ; 62                 ;
+;                                             ;                    ;
+; Total registers                             ; 66                 ;
+;     -- Dedicated logic registers            ; 66                 ;
+;     -- I/O registers                        ; 0                  ;
+;                                             ;                    ;
+; I/O pins                                    ; 15                 ;
+;                                             ;                    ;
+; Embedded Multiplier 9-bit elements          ; 0                  ;
+;                                             ;                    ;
+; Maximum fan-out node                        ; freqDivider:u1|clk ;
+; Maximum fan-out                             ; 34                 ;
+; Total fan-out                               ; 443                ;
+; Average fan-out                             ; 2.16               ;
++---------------------------------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                        ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------+-----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name     ; Entity Name     ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------+-----------------+--------------+
+; |vga                       ; 109 (1)             ; 66 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |vga                    ; vga             ; work         ;
+;    |freqDivider:u1|        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga|freqDivider:u1     ; freqDivider     ; work         ;
+;    |hcounter:u2|           ; 48 (48)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga|hcounter:u2        ; hcounter        ; work         ;
+;    |image_generator:u4|    ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga|image_generator:u4 ; image_generator ; work         ;
+;    |vcounter:u3|           ; 48 (48)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga|vcounter:u3        ; vcounter        ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 66    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |vga|image_generator:u4|green[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |vga|image_generator:u4|red[1]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 15                          ;
+; cycloneiii_ff         ; 66                          ;
+;     plain             ; 66                          ;
+; cycloneiii_lcell_comb ; 110                         ;
+;     arith             ; 62                          ;
+;         2 data inputs ; 62                          ;
+;     normal            ; 48                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 35                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.80                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu Nov 26 19:37:56 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20032): Parallel compilation is enabled and will use up to 3 processors
+Warning (20031): Parallel compilation is enabled for 3 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
+Info (12021): Found 2 design units, including 1 entities, in source file freqdivider.vhdl
+    Info (12022): Found design unit 1: freqDivider-behavior File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/freqDivider.vhdl Line: 15
+    Info (12023): Found entity 1: freqDivider File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/freqDivider.vhdl Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file hcounter.vhdl
+    Info (12022): Found design unit 1: hcounter-behavior File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/hcounter.vhdl Line: 18
+    Info (12023): Found entity 1: hcounter File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/hcounter.vhdl Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file vcounter.vhdl
+    Info (12022): Found design unit 1: vcounter-behavior File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vcounter.vhdl Line: 17
+    Info (12023): Found entity 1: vcounter File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vcounter.vhdl Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file vga.vhdl
+    Info (12022): Found design unit 1: vga-behavior File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 15
+    Info (12023): Found entity 1: vga File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file image_generator.vhdl
+    Info (12022): Found design unit 1: image_generator-behavior File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 16
+    Info (12023): Found entity 1: image_generator File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 4
+Info (12127): Elaborating entity "vga" for the top level hierarchy
+Info (12129): Elaborating entity "freqDivider" using architecture "A:behavior" for hierarchy "freqDivider:u1" File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 27
+Info (12129): Elaborating entity "hcounter" using architecture "A:behavior" for hierarchy "hcounter:u2" File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 34
+Info (12129): Elaborating entity "vcounter" using architecture "A:behavior" for hierarchy "vcounter:u3" File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 41
+Info (12129): Elaborating entity "image_generator" using architecture "A:behavior" for hierarchy "image_generator:u4" File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 52
+Warning (10541): VHDL Signal Declaration warning at image_generator.vhdl(20): used implicit default value for signal "sprite" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10036): Verilog HDL or VHDL warning at image_generator.vhdl(27): object "dataG" assigned a value but never read File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 27
+Warning (10036): Verilog HDL or VHDL warning at image_generator.vhdl(28): object "dataB" assigned a value but never read File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 28
+Warning (10492): VHDL Process Statement warning at image_generator.vhdl(40): signal "sprite" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 40
+Warning (10492): VHDL Process Statement warning at image_generator.vhdl(40): signal "addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 40
+Warning (10492): VHDL Process Statement warning at image_generator.vhdl(42): signal "sprite" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 42
+Warning (10492): VHDL Process Statement warning at image_generator.vhdl(42): signal "addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 42
+Warning (10492): VHDL Process Statement warning at image_generator.vhdl(44): signal "sprite" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 44
+Warning (10492): VHDL Process Statement warning at image_generator.vhdl(44): signal "addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 44
+Warning (10492): VHDL Process Statement warning at image_generator.vhdl(47): signal "dataR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 47
+Warning (10492): VHDL Process Statement warning at image_generator.vhdl(48): signal "dataR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 48
+Warning (10492): VHDL Process Statement warning at image_generator.vhdl(49): signal "dataR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 49
+Warning (10631): VHDL Process Statement warning at image_generator.vhdl(31): inferring latch(es) for signal or variable "addr", which holds its previous value in one or more paths through the process File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Warning (10631): VHDL Process Statement warning at image_generator.vhdl(31): inferring latch(es) for signal or variable "dataR", which holds its previous value in one or more paths through the process File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Warning (10873): Using initial value X (don't care) for net "sprite[0][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[1][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[2][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[3][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[4][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[5][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[6][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[7][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[8][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[9][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[10][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[11][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[12][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[13][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[14][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[15][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[16][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[17][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[18][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[19][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[20][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[21][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[22][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[23][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[24][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[25][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[26][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[27][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[28][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[29][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[30][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[31][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[32][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[33][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[34][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[35][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[36][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[37][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[38][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[39][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[40][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[41][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[42][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[43][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[44][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[45][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[46][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[47][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[48][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[49][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[50][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[51][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[52][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[53][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[54][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[55][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[56][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[57][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[58][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[59][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[60][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[61][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[62][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[63][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[64][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[65][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[66][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[67][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[68][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[69][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[70][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[71][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[72][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[73][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[74][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[75][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[76][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[77][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[78][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[79][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[80][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[81][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[82][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[83][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[84][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[85][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[86][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[87][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[88][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[89][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[90][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[91][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[92][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[93][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[94][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[95][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[96][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[97][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[98][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[99][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[100][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[101][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[102][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[103][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[104][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[105][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[106][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[107][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[108][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[109][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[110][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[111][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[112][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[113][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[114][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[115][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[116][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[117][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[118][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[119][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[120][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[121][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[122][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[123][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[124][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[125][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[126][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[127][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[128][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[129][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[130][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[131][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[132][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[133][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[134][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[135][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[136][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[137][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[138][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[139][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[140][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[141][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[142][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[143][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[144][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[145][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[146][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[147][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[148][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[149][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[150][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[151][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[152][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[153][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[154][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[155][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[156][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[157][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[158][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[159][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[160][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[161][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[162][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[163][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[164][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[165][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[166][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[167][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[168][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[169][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[170][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[171][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[172][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[173][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[174][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[175][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[176][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[177][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[178][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[179][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[180][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[181][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[182][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[183][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[184][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[185][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[186][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[187][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[188][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[189][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[190][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[191][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[192][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[193][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[194][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[195][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[196][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[197][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[198][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[199][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[200][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[201][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[202][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[203][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[204][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[205][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[206][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[207][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[208][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[209][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[210][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[211][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[212][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[213][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[214][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[215][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[216][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[217][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[218][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[219][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[220][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[221][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[222][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[223][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[224][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[225][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[226][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[227][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[228][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[229][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[230][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[231][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[232][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[233][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[234][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[235][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[236][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[237][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[238][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[239][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[240][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[241][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[242][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[243][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[244][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[245][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[246][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[247][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[248][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[249][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[250][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[251][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[252][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[253][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[254][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[255][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[256][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[257][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[258][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[259][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[260][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[261][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[262][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[263][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[264][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[265][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[266][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[267][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[268][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[269][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[270][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[271][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[272][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[273][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[274][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[275][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[276][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[277][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[278][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[279][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[280][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[281][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[282][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[283][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[284][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[285][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[286][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[287][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[288][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[289][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[290][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[291][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[292][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[293][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[294][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[295][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[296][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[297][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[298][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[299][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[300][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[301][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[302][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[303][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[304][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[305][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[306][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[307][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[308][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[309][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[310][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[311][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[312][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[313][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[314][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[315][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[316][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[317][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[318][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[319][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[320][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[321][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[322][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[323][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[324][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[325][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[326][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[327][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[328][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[329][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[330][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[331][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[332][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[333][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[334][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[335][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[336][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[337][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[338][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[339][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[340][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[341][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[342][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[343][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[344][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[345][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[346][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[347][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[348][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[349][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[350][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[351][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[352][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[353][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[354][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[355][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[356][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[357][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[358][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[359][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[360][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[361][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[362][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[363][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[364][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[365][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[366][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[367][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[368][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[369][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[370][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[371][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[372][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[373][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[374][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[375][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[376][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[377][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[378][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[379][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[380][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[381][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[382][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[383][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[384][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[385][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[386][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[387][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[388][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[389][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[390][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[391][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[392][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[393][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[394][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[395][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[396][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[397][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[398][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[399][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[400][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[401][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[402][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[403][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[404][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[405][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[406][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[407][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[408][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[409][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[410][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[411][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[412][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[413][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[414][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[415][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[416][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[417][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[418][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[419][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[420][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[421][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[422][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[423][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[424][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[425][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[426][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[427][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[428][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[429][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[430][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[431][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[432][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[433][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[434][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[435][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[436][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[437][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[438][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[439][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[440][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[441][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[442][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[443][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[444][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[445][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[446][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[447][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[448][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[449][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[450][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[451][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[452][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[453][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[454][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[455][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[456][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[457][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[458][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[459][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[460][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[461][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[462][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[463][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[464][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[465][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[466][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[467][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[468][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[469][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[470][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[471][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[472][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[473][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[474][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[475][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[476][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[477][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[478][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[479][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[480][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[481][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[482][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[483][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[484][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[485][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[486][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[487][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[488][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[489][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[490][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[491][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[492][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[493][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[494][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[495][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[496][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[497][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[498][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[499][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[500][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[501][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[502][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[503][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[504][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[505][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[506][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[507][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[508][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[509][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[510][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[511][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[512][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[513][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[514][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[515][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[516][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[517][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[518][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[519][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[520][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[521][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[522][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[523][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[524][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[525][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[526][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[527][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[528][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[529][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[530][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[531][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[532][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[533][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[534][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[535][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[536][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[537][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[538][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[539][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[540][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[541][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[542][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[543][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[544][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[545][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[546][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[547][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[548][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[549][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[550][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[551][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[552][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[553][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[554][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[555][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[556][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[557][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[558][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[559][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[560][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[561][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[562][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[563][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[564][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[565][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[566][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[567][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[568][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[569][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[570][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[571][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[572][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[573][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[574][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[575][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[576][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[577][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[578][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[579][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[580][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[581][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[582][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[583][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[584][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[585][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[586][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[587][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[588][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[589][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[590][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[591][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[592][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[593][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[594][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[595][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[596][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[597][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[598][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[599][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[600][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[601][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[602][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[603][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[604][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[605][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[606][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[607][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[608][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[609][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[610][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[611][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[612][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[613][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[614][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[615][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[616][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[617][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[618][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[619][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[620][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[621][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[622][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[623][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[624][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[625][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[626][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[627][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[628][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[629][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[630][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[631][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[632][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[633][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[634][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[635][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[636][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[637][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[638][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[639][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[640][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[641][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[642][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[643][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[644][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[645][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[646][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[647][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[648][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[649][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[650][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[651][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[652][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[653][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[654][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[655][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[656][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[657][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[658][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[659][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[660][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[661][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[662][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[663][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[664][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[665][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[666][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[667][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[668][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[669][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[670][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[671][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[672][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[673][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[674][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[675][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[676][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[677][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[678][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[679][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[680][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[681][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[682][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[683][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[684][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[685][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[686][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[687][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[688][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[689][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[690][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[691][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[692][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[693][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[694][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[695][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[696][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[697][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[698][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[699][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[700][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[701][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[702][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[703][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[704][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[705][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[706][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[707][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[708][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[709][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[710][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[711][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[712][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[713][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[714][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[715][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[716][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[717][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[718][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[719][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[720][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[721][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[722][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[723][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[724][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[725][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[726][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[727][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[728][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[729][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[730][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[731][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[732][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[733][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[734][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[735][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[736][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[737][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[738][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[739][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[740][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[741][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[742][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[743][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[744][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[745][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[746][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[747][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[748][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[749][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[750][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[751][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[752][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[753][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[754][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[755][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[756][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[757][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[758][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[759][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[760][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[761][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[762][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[763][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[764][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[765][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[766][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Warning (10873): Using initial value X (don't care) for net "sprite[767][7..4]" at image_generator.vhdl(20) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 20
+Info (10041): Inferred latch for "dataR[0]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Info (10041): Inferred latch for "dataR[1]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Info (10041): Inferred latch for "dataR[2]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Info (10041): Inferred latch for "dataR[3]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Info (10041): Inferred latch for "addr[0]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Info (10041): Inferred latch for "addr[1]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Info (10041): Inferred latch for "addr[2]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Info (10041): Inferred latch for "addr[3]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Info (10041): Inferred latch for "addr[4]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Info (10041): Inferred latch for "addr[5]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Info (10041): Inferred latch for "addr[6]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Info (10041): Inferred latch for "addr[7]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Info (10041): Inferred latch for "addr[8]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Info (10041): Inferred latch for "addr[9]" at image_generator.vhdl(31) File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/image_generator.vhdl Line: 31
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "green[0]" is stuck at GND File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 10
+    Warning (13410): Pin "green[1]" is stuck at GND File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 10
+    Warning (13410): Pin "green[2]" is stuck at GND File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 10
+    Warning (13410): Pin "green[3]" is stuck at GND File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 10
+    Warning (13410): Pin "blue[0]" is stuck at GND File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 11
+    Warning (13410): Pin "blue[1]" is stuck at GND File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 11
+    Warning (13410): Pin "blue[2]" is stuck at GND File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 11
+    Warning (13410): Pin "blue[3]" is stuck at GND File: C:/Users/gucho/Documents/Semestre7/vlsi/vgasprite/vga.vhdl Line: 11
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 125 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 110 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 793 warnings
+    Info: Peak virtual memory: 4784 megabytes
+    Info: Processing ended: Thu Nov 26 19:38:12 2020
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:28
+
+

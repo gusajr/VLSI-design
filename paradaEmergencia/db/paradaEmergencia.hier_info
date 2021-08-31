@@ -1,0 +1,8 @@
+|paradaEmergencia
+clk => state.CLK
+clk => paroTotal~reg0.CLK
+rojo => paroTotal.OUTPUTSELECT
+rojo => state.OUTPUTSELECT
+paroTotal <= paroTotal~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

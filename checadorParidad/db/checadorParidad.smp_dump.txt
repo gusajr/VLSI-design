@@ -1,0 +1,6 @@
+
+State Machine - |checadorParidad|state
+Name state.par state.non state.eI 
+state.eI 0 0 0 
+state.non 0 1 1 
+state.par 1 0 1 

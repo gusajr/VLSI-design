@@ -1,0 +1,49 @@
+|slowCounter
+f50 => freqdivider:u1.f50
+Q[0] << contador:u2.Q[0]
+Q[1] << contador:u2.Q[1]
+Q[2] << contador:u2.Q[2]
+Q[3] << contador:u2.Q[3]
+
+
+|slowCounter|freqdivider:u1
+f50 => ck.CLK
+f50 => cnt[0].CLK
+f50 => cnt[1].CLK
+f50 => cnt[2].CLK
+f50 => cnt[3].CLK
+f50 => cnt[4].CLK
+f50 => cnt[5].CLK
+f50 => cnt[6].CLK
+f50 => cnt[7].CLK
+f50 => cnt[8].CLK
+f50 => cnt[9].CLK
+f50 => cnt[10].CLK
+f50 => cnt[11].CLK
+f50 => cnt[12].CLK
+f50 => cnt[13].CLK
+f50 => cnt[14].CLK
+f50 => cnt[15].CLK
+f50 => cnt[16].CLK
+f50 => cnt[17].CLK
+f50 => cnt[18].CLK
+f50 => cnt[19].CLK
+f50 => cnt[20].CLK
+f50 => cnt[21].CLK
+f50 => cnt[22].CLK
+f50 => cnt[23].CLK
+f50 => cnt[24].CLK
+clk <= ck.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|slowCounter|contador:u2
+clk => R[0].CLK
+clk => R[1].CLK
+clk => R[2].CLK
+clk => R[3].CLK
+Q[0] <= R[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= R[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= R[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= R[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

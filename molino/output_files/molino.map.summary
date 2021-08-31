@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Oct 05 18:49:36 2020
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : molino
+Top-level Entity Name : molino
+Family : MAX 10
+Total logic elements : 6
+    Total combinational functions : 4
+    Dedicated logic registers : 5
+Total registers : 5
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

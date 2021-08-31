@@ -1,0 +1,20 @@
+|molino
+clk => M2~reg0.CLK
+clk => M1~reg0.CLK
+clk => state~4.DATAIN
+S => state.OUTPUTSELECT
+S => state.OUTPUTSELECT
+S => state.OUTPUTSELECT
+S => state.OUTPUTSELECT
+S => state.OUTPUTSELECT
+S => state.OUTPUTSELECT
+I => state.OUTPUTSELECT
+I => state.OUTPUTSELECT
+I => state.OUTPUTSELECT
+I => state.OUTPUTSELECT
+I => state.OUTPUTSELECT
+I => state.OUTPUTSELECT
+M1 <= M1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+M2 <= M2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

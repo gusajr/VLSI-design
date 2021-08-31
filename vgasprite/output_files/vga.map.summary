@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Thu Nov 26 19:38:12 2020
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : vga
+Top-level Entity Name : vga
+Family : MAX 10
+Total logic elements : 109
+    Total combinational functions : 109
+    Dedicated logic registers : 66
+Total registers : 66
+Total pins : 15
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

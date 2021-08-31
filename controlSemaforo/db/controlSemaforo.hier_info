@@ -1,0 +1,51 @@
+|controlSemaforo
+f50 => freqdivider:u1.f50
+ck << freqdivider:u1.clk
+R << contador:u2.R
+V << contador:u2.V
+A << contador:u2.A
+
+
+|controlSemaforo|freqdivider:u1
+f50 => ck.CLK
+f50 => cnt[0].CLK
+f50 => cnt[1].CLK
+f50 => cnt[2].CLK
+f50 => cnt[3].CLK
+f50 => cnt[4].CLK
+f50 => cnt[5].CLK
+f50 => cnt[6].CLK
+f50 => cnt[7].CLK
+f50 => cnt[8].CLK
+f50 => cnt[9].CLK
+f50 => cnt[10].CLK
+f50 => cnt[11].CLK
+f50 => cnt[12].CLK
+f50 => cnt[13].CLK
+f50 => cnt[14].CLK
+f50 => cnt[15].CLK
+f50 => cnt[16].CLK
+f50 => cnt[17].CLK
+f50 => cnt[18].CLK
+f50 => cnt[19].CLK
+f50 => cnt[20].CLK
+f50 => cnt[21].CLK
+f50 => cnt[22].CLK
+f50 => cnt[23].CLK
+f50 => cnt[24].CLK
+clk <= ck.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controlSemaforo|contador:u2
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => V~reg0.CLK
+clk => A~reg0.CLK
+clk => R~reg0.CLK
+clk => state~4.DATAIN
+R <= R~reg0.DB_MAX_OUTPUT_PORT_TYPE
+A <= A~reg0.DB_MAX_OUTPUT_PORT_TYPE
+V <= V~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

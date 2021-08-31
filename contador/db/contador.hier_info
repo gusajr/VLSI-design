@@ -1,0 +1,11 @@
+|contador
+clk => R[0].CLK
+clk => R[1].CLK
+clk => R[2].CLK
+clk => R[3].CLK
+Q[0] <= R[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= R[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= R[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= R[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

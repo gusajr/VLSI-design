@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std.logic.1164.all;
+use ieee.std.logic.unsigned.all; --permite incrementar una variable
+
+--PUERTO
+entity contador is
+port(
+	clk: in std.logic;
+	Q: out std.logic.vector(3 downto 0);
+)
+end entity contador;
+
+--CIRCUITO INTERIOR: ARQUITECTURA
+
+architecture behavior of contador is
+	signal R: std.logic.vector(3 downto 0) := "0000";
+begin
+	Q <= R;
+	--CONTENIDO DE LA LÓGICA
+	process(clk)
+	begin
+		if rising_edge(clk) then
+		end if;
+	end;
+end architecture behavior;

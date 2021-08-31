@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pulso",
+					"strict" : false
+				},
+				{
+					"name" : "ancho[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ancho[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ancho[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ancho[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ancho[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ancho[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ancho[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ancho[0]",
+					"strict" : false
+				},
+				{
+					"name" : "f50",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

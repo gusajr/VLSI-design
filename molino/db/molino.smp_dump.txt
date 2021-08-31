@@ -1,0 +1,6 @@
+
+State Machine - |molino|state
+Name state.lleno state.medio state.vacio 
+state.vacio 0 0 0 
+state.medio 0 1 1 
+state.lleno 1 0 1 

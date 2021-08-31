@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'hcounter:u2|cy'
+Slack : -2.738
+TNS   : -63.730
+
+Type  : Slow 1200mV 85C Model Setup 'freqDivider:u1|clk'
+Slack : -2.588
+TNS   : -59.593
+
+Type  : Slow 1200mV 85C Model Setup 'f50'
+Slack : -1.154
+TNS   : -1.154
+
+Type  : Slow 1200mV 85C Model Hold 'freqDivider:u1|clk'
+Slack : 0.639
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'hcounter:u2|cy'
+Slack : 0.640
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'f50'
+Slack : 0.955
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'f50'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'freqDivider:u1|clk'
+Slack : -1.403
+TNS   : -46.299
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'hcounter:u2|cy'
+Slack : -1.403
+TNS   : -44.896
+
+Type  : Slow 1200mV 0C Model Setup 'hcounter:u2|cy'
+Slack : -2.338
+TNS   : -54.543
+
+Type  : Slow 1200mV 0C Model Setup 'freqDivider:u1|clk'
+Slack : -2.239
+TNS   : -50.660
+
+Type  : Slow 1200mV 0C Model Setup 'f50'
+Slack : -1.005
+TNS   : -1.005
+
+Type  : Slow 1200mV 0C Model Hold 'freqDivider:u1|clk'
+Slack : 0.591
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'hcounter:u2|cy'
+Slack : 0.592
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'f50'
+Slack : 0.862
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'f50'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'freqDivider:u1|clk'
+Slack : -1.403
+TNS   : -46.299
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'hcounter:u2|cy'
+Slack : -1.403
+TNS   : -44.896
+
+Type  : Fast 1200mV 0C Model Setup 'hcounter:u2|cy'
+Slack : -0.492
+TNS   : -7.273
+
+Type  : Fast 1200mV 0C Model Setup 'freqDivider:u1|clk'
+Slack : -0.472
+TNS   : -5.900
+
+Type  : Fast 1200mV 0C Model Setup 'f50'
+Slack : -0.180
+TNS   : -0.180
+
+Type  : Fast 1200mV 0C Model Hold 'freqDivider:u1|clk'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'hcounter:u2|cy'
+Slack : 0.247
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'f50'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'f50'
+Slack : -3.000
+TNS   : -4.008
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'freqDivider:u1|clk'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'hcounter:u2|cy'
+Slack : -1.000
+TNS   : -32.000
+
+------------------------------------------------------------

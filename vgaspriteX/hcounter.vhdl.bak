@@ -1,0 +1,28 @@
+--h_counter
+library ieee;
+use ieee.std_logic_1164.all;
+entity hcounter is
+port	( 	f25: in std_logic;
+			h_count: out integer;
+			h_sync: out std_logic:='1';
+			cy: out std_logic:='0'
+		);
+end entity hcounter;
+architecture behavior of hcounter is
+	signal hcnt: integer:=0;
+begin
+	h_count <= hcnt;
+	h_sync<=’1’ when (hcnt >=656 and hcnt<=751) else '0';
+process(f25)
+begin
+	if rising_edge(25) then
+		if hcnt=799 then
+			hcnt<=0;
+			cy='1';
+		else
+			hcnt<=hcnt+1;
+			cy<='0';
+		end if;
+	end if;
+end process;
+end architecture behavior;

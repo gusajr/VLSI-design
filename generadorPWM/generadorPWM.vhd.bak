@@ -1,0 +1,40 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity generadorPWM is
+port(
+		f50	: in std_logic;
+		Q		: out std_logic_vector (7 downto 0)
+	 );
+end entity generadorPWM;
+
+
+architecture behavior of generadorPWM is
+	--Cableados y bufferes internos
+	signal clk: std_logic;
+	signal count: std_logic;
+	signal ancho: std_logic;
+	signal pulse: std_logic;
+	
+begin
+
+--port(	f50	: in 		std_logic;
+--		clk	: out 	std_logic
+--	 );
+u1: entity work.freqdivider (behavior) port map (f50,clk);
+
+--port( clk: in std_logic;
+--		  Q: out std_logic_vector(3 downto 0)
+--	 );
+u2: entity work.contador(behavior) port map (clk,Q);
+
+--port (
+--		count	:	in integer;
+--		ancho	:	in integer;
+--		pulse	:	out std_logic
+--		);
+
+u3: entity work.comparador(behavior) port map (count,ancho,pulse);
+
+
+end architecture behavior;

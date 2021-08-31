@@ -1,0 +1,6 @@
+
+State Machine - |semaforo|state
+Name state.Amarillo state.Verde state.Rojo 
+state.Rojo 0 0 0 
+state.Verde 0 1 1 
+state.Amarillo 1 0 1 

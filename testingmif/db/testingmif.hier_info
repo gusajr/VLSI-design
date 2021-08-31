@@ -1,0 +1,40 @@
+|testingmif
+f50 => cnt[0].CLK
+f50 => cnt[1].CLK
+f50 => cnt[2].CLK
+f50 => cnt[3].CLK
+f50 => cnt[4].CLK
+f50 => cnt[5].CLK
+f50 => cnt[6].CLK
+f50 => cnt[7].CLK
+f50 => cnt[8].CLK
+f50 => cnt[9].CLK
+f50 => cnt[10].CLK
+f50 => cnt[11].CLK
+f50 => cnt[12].CLK
+f50 => cnt[13].CLK
+f50 => cnt[14].CLK
+f50 => cnt[15].CLK
+f50 => cnt[16].CLK
+f50 => cnt[17].CLK
+f50 => cnt[18].CLK
+f50 => cnt[19].CLK
+f50 => cnt[20].CLK
+f50 => cnt[21].CLK
+f50 => cnt[22].CLK
+f50 => cnt[23].CLK
+f50 => cnt[24].CLK
+f50 => cnt[25].CLK
+f50 => cnt[26].CLK
+f50 => cnt[27].CLK
+f50 => cnt[28].CLK
+f50 => cnt[29].CLK
+f50 => cnt[30].CLK
+f50 => cnt[31].CLK
+f50 => clk.CLK
+data[0] << data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[1] << data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[2] << data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[3] << data[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

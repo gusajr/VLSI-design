@@ -1,0 +1,68 @@
+|generadorPWM
+f50 => freqdivider:u1.f50
+ancho[0] => comparador:u3.ancho[0]
+ancho[1] => comparador:u3.ancho[1]
+ancho[2] => comparador:u3.ancho[2]
+ancho[3] => comparador:u3.ancho[3]
+ancho[4] => comparador:u3.ancho[4]
+ancho[5] => comparador:u3.ancho[5]
+ancho[6] => comparador:u3.ancho[6]
+ancho[7] => comparador:u3.ancho[7]
+pulso << comparador:u3.pulso
+
+
+|generadorPWM|freqdivider:u1
+f50 => ck.CLK
+f50 => cnt[0].CLK
+f50 => cnt[1].CLK
+f50 => cnt[2].CLK
+f50 => cnt[3].CLK
+f50 => cnt[4].CLK
+f50 => cnt[5].CLK
+f50 => cnt[6].CLK
+f50 => cnt[7].CLK
+f50 => cnt[8].CLK
+f50 => cnt[9].CLK
+f50 => cnt[10].CLK
+clk <= ck.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|generadorPWM|contador:u2
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+conteo[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+conteo[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+conteo[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+conteo[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+conteo[4] <= cnt[4].DB_MAX_OUTPUT_PORT_TYPE
+conteo[5] <= cnt[5].DB_MAX_OUTPUT_PORT_TYPE
+conteo[6] <= cnt[6].DB_MAX_OUTPUT_PORT_TYPE
+conteo[7] <= cnt[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|generadorPWM|comparador:u3
+conteo[0] => LessThan0.IN8
+conteo[1] => LessThan0.IN7
+conteo[2] => LessThan0.IN6
+conteo[3] => LessThan0.IN5
+conteo[4] => LessThan0.IN4
+conteo[5] => LessThan0.IN3
+conteo[6] => LessThan0.IN2
+conteo[7] => LessThan0.IN1
+ancho[0] => LessThan0.IN16
+ancho[1] => LessThan0.IN15
+ancho[2] => LessThan0.IN14
+ancho[3] => LessThan0.IN13
+ancho[4] => LessThan0.IN12
+ancho[5] => LessThan0.IN11
+ancho[6] => LessThan0.IN10
+ancho[7] => LessThan0.IN9
+pulso <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+

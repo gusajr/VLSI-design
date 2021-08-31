@@ -1,0 +1,154 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/gucho/Documents/Semestre7/vlsi/checadorParidad/simulation/qsim
+Echecadorparidad
+Z1 w1604012742
+Z2 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 ]LY<>e3?`4Wb8dl1GV_X90
+Z3 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 `f]nQdYHZLbCG_>oYeZOo2
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z9 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 8
+R0
+Z10 8checadorParidad.vho
+Z11 FchecadorParidad.vho
+l0
+L91 1
+VfHmHiQ>[X9:OM6W@5`TWc2
+!s100 >9ElH:gRR65m2Hm:FIK9U2
+Z12 OV;C;2020.1;71
+32
+Z13 !s110 1604012743
+!i10b 1
+Z14 !s108 1604012743.000000
+Z15 !s90 -work|work|checadorParidad.vho|
+Z16 !s107 checadorParidad.vho|
+!i113 1
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 15 checadorparidad 0 22 fHmHiQ>[X9:OM6W@5`TWc2
+!i122 8
+l143
+L105 283
+V1N^ZY]bzJ7koNF<hkiO6N3
+!s100 AKQ1:KHf6MVU?JU5ikVlL2
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Echecadorparidad_vhd_vec_tst
+Z19 w1604012740
+R7
+R8
+!i122 9
+R0
+Z20 8Waveform2.vwf.vht
+Z21 FWaveform2.vwf.vht
+l0
+L32 1
+V0?5I@e2oR3az=IXW7Gn[z0
+!s100 FSgZa;EiVMiF9998RAFUW2
+R12
+32
+Z22 !s110 1604012744
+!i10b 1
+R14
+Z23 !s90 -work|work|Waveform2.vwf.vht|
+Z24 !s107 Waveform2.vwf.vht|
+!i113 1
+R17
+R18
+Achecadorparidad_arch
+R7
+R8
+Z25 DEx4 work 27 checadorparidad_vhd_vec_tst 0 22 0?5I@e2oR3az=IXW7Gn[z0
+!i122 9
+l47
+L34 53
+V=gnj86]WIl?_m=n22ffH=3
+!s100 SC]j<AgEgO?77j<^@B`?g0
+R12
+32
+R22
+!i10b 1
+R14
+R23
+R24
+!i113 1
+R17
+R18
+Ehard_block
+R1
+R4
+R2
+R6
+R7
+R8
+R3
+!i122 8
+R0
+R10
+R11
+l0
+L35 1
+Vhj[i;a0dD85B`o1JPT^cg2
+!s100 3A]XnMhF<;9mKUe5mn3aM1
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 10 hard_block 0 22 hj[i;a0dD85B`o1JPT^cg2
+!i122 8
+l76
+L54 28
+Va5ClDYec`9chO`Ne0M1NL2
+!s100 >:Wi^nX[YiN=@>>JC6K_83
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18

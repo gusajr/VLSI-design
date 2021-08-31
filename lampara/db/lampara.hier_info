@@ -1,0 +1,6 @@
+|lampara
+clk => luz.CLK
+boton => luz.ENA
+foco << luz.DB_MAX_OUTPUT_PORT_TYPE
+
+

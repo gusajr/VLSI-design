@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity comparador is
+port (
+		count	:	in integer;
+		ancho	:	in integer;
+		pulse	:	out std_logic
+		);
+end entity comparador;
+
+architecture behavior of comparador is
+begin
+	pulse <= '1' when count<ancho else '0';
+end architecture behavior;

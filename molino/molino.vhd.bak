@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity molino is
+port(
+	clk: in std_logic;
+	S,I: in std_logic;
+	M1: out std_logic:='0';
+	M2: out std_logic:='0'
+); 
+end entity molino; --TOP DOWN, ARRIBA ABAJO
+
+architecture behavior molino is
+begin
+	process(clk)
+	begin
+		if rising_edge(clk) then
+		end if;
+	end process;
+end architecture behavior;
